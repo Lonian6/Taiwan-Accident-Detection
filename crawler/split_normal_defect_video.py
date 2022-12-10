@@ -19,7 +19,18 @@ def main(
         df['title'].str.contains("車禍") | \
         df['title'].str.contains("事故") | \
         df['title'].str.contains("擦撞") | \
-        df['title'].str.contains("相撞") 
+        df['title'].str.contains("相撞") | \
+        df['title'].str.contains("肇事") | \
+        df['title'].str.contains("事故") | \
+        df['title'].str.contains("擊落") | \
+        df['title'].str.contains("撞我") | \
+        df['title'].str.contains("撞到") | \
+        df['title'].str.contains("追撞") | \
+        df['title'].str.contains("對撞") | \
+        df['title'].str.contains("碰到") | \
+        df['title'].str.contains("撞飛") | \
+        df['title'].str.contains("翻車") | \
+        df['title'].str.contains("自摔")
     ]
     normal_df = df[~df['title'].isin(defect_df['title'].tolist())]
 
